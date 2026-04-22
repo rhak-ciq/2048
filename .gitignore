@@ -1,0 +1,14 @@
+# Environments
+.env
+.envrc
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.cursorignore
+.cursorindexingignore
+
+# macOS
+.DS_Store

@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #faf8ef;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: bold;
+  color: #776e65;
+}
+
+.scores {
+  display: flex;
+  gap: 8px;
+}
+
+.score-box {
+  background: #bbada0;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-align: center;
+  min-width: 64px;
+}
+
+.score-box .label {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.score-box span:not(.label) {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.instructions {
+  color: #776e65;
+  font-size: 14px;
+}
+
+button {
+  background: #8f7a66;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button:hover {
+  background: #776e65;
+}
+
+.board-wrapper {
+  position: relative;
+}
+
+#board {
+  background: #bbada0;
+  border-radius: 6px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.tile {
+  background: #cdc1b4;
+  border-radius: 4px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #776e65;
+}
+
+.tile-2    { background: #eee4da; }
+.tile-4    { background: #ede0c8; }
+.tile-8    { background: #f2b179; color: #f9f6f2; }
+.tile-16   { background: #f59563; color: #f9f6f2; }
+.tile-32   { background: #f67c5f; color: #f9f6f2; }
+.tile-64   { background: #f65e3b; color: #f9f6f2; }
+.tile-128  { background: #edcf72; color: #f9f6f2; font-size: 26px; }
+.tile-256  { background: #edcc61; color: #f9f6f2; font-size: 26px; }
+.tile-512  { background: #edc850; color: #f9f6f2; font-size: 26px; }
+.tile-1024 { background: #edc53f; color: #f9f6f2; font-size: 20px; }
+.tile-2048 { background: #edc22e; color: #f9f6f2; font-size: 20px; }
+
+#overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(238, 228, 218, 0.88);
+  border-radius: 6px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#message {
+  font-size: 40px;
+  font-weight: bold;
+  color: #776e65;
+}
